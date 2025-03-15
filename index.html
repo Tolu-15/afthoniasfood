@@ -312,15 +312,9 @@
     }
 
     .text-content h1 {
-        font-size: 28px;
+        font-size: 28px; /* Smaller size to fit */
         line-height: 1.2;
         margin: 0 auto;
-        overflow-wrap: break-word;
-    }
-
-    .text-content h1::after {
-        content: "\A Afonia Foods";
-        white-space: pre;
     }
 
     .text-content p {
@@ -332,27 +326,13 @@
 /* For Small Phones */
 @media (max-width: 480px) {
     .text-content h1 {
-        font-size: 24px;
+        font-size: 24px; /* Even smaller on smaller screens */
     }
 
     .text-content p {
         font-size: 14px;
     }
 }
-
-/* For Small Phones */
-@media (max-width: 480px) {
-    .text-content h1 {
-        font-size: 24px;
-        word-wrap: break-word;
-        max-width: 100%;
-        margin: 0 auto;
-        overflow-wrap: break-word;
-    }
-
-    .text-content p {
-        font-size: 14px;
-    }
 
     .logo-container img,
     .ceo-logo-container img {
