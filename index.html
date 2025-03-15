@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blurry Background with Text</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the background */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Blurred background image */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('286417c4-9b8a-4091-85b9-5804d141466c.jpeg') center/cover no-repeat;
+            filter: blur(5px);
+            z-index: 1;
+        }
+
+        /* Dark overlay to improve text readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Darkens the background */
+            z-index: 2;
+        }
+
+        /* Text content */
+        .text-content {
+            color: white;
+            z-index: 3;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .text-content h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 3000px; /* Adjust width to control size */
+    margin: 0 auto;
+}
+        .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+/* Logo */
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.logo-container img {
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+     /* Spin animation */
+     animation: spin 5s linear infinite;
+}
+
+/* Keyframes for spin */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* About Text */
+.about-text {
+    flex: 2;
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+
+}
+
+/* About CEO Section */
+.about-ceo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #f8f8f8;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* CEO Logo */
+.ceo-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ceo-logo-container img {
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CEO Text */
+.about-text2 {
+    flex: 2;
+    max-width: 500px;
+}
+
+.about-text2 h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-text2 p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Navigation Bar */
+.navbar {
+    background: #8B4513; /* Brown color */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+/* Product Section */
+.product-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background: transparent;
+}
+
+.slide {
+    display: none;
+    background: transparent;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Product Description */
+.product-description {
+    max-width: 400px;
+    text-align: left;
+}
+
+.product-description h2 {
+    font-size: 32px;
+    color: #8B4513;
+    margin-bottom: 15px;
+}
+
+.product-description p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Animation */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+/* Container for animation */
+.animated-h1 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Style for each letter */
+.animated-h1 span {
+    display: inline-block;
+    animation: dropLetter 0.5s ease forwards;
+    animation-iteration-count: infinite; /* Makes it loop */
+    animation-duration: 3s; /* Controls total animation duration */
+}
+
+/* Animation */
+@keyframes dropLetter {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    20%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#product">Menu</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+<div id="hero" class="hero-section">
+    <div class="overlay"></div>
+    <div class="text-content">
+        <h1 class="animated-h1">
+            W<span style="animation-delay: 0.1s;">E</span>
+            L<span style="animation-delay: 0.2s;">C</span>
+            O<span style="animation-delay: 0.3s;">M</span>
+            E<span style="animation-delay: 0.4s;"> </span>
+            T<span style="animation-delay: 0.5s;">O</span>
+            A<span style="animation-delay: 0.6s;">F</span>
+            T<span style="animation-delay: 0.7s;">H</span>
+            O<span style="animation-delay: 0.8s;">N</span>
+            I<span style="animation-delay: 0.9s;">A</span>
+            F<span style="animation-delay: 1s;">O</span>
+            O<span style="animation-delay: 1.1s;">D</span>
+            S<span style="animation-delay: 1.2s;">!</span>
+        </h1>
+        
+        <p>
+            Fresh and crisp, with colors bright,
+            Afonia’s salads bring pure delight.
+            Every leaf, a taste so true —
+            Healthy, tasty, made for you.
+            
+            Welcome to where goodness grows,
+            Afonia Foods — the place for you to choose! 🌱
+        </p>
+    </div>
+</div>
+<div id="about" class="about-container">
+    <div class="about-section">
+        <div class="logo-container">
+            <img src="Brown Beige Circle Chinese Food Logo_20250315_184612_0000.png" alt="Afonia Foods Logo">
+        </div>
+        <div class="about-text">
+            <h2>About Afonia Foods</h2>
+            <p>
+                At Afonia Foods, we specialize in crafting fresh, healthy, and delicious salads.  
+                Every bowl is made with care, bringing a perfect blend of flavor and nutrition.  
+                Taste the freshness, feel the goodness.  
+            </p>
+        </div>
+    </div>
+
+    <div class="about-ceo">
+        <div class="ceo-logo-container">
+            <img src="" alt="Afonia Foods Ceo">
+        </div>
+        <div class="about-text2">
+            <h2>About Afonia Foods CEO</h2>
+            <h3>Mosunmola Bammodu</h3>
+            <p>Founder & CEO of Afonia Foods</p>
+            <p>
+                At Afonia Foods, we specialize in crafting fresh, healthy, and delicious salads.  
+                Every bowl is made with care, bringing a perfect blend of flavor and nutrition.  
+                Taste the freshness, feel the goodness.  
+            </p>
+            <blockquote>
+                "Freshness is not just an ingredient; it’s our promise." — Mosunmola Bammodu
+            </blockquote>
+            <h4>Our Vision</h4>
+            <p>“To make healthy eating enjoyable and accessible for everyone.”</p>
+            <div class="ceo-socials">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+                <a href="https://www.instagram.com/afthoniafoods/" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="product" class="product-section">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="366a191a-1c2e-4375-abb4-8b26d585b884.jpeg" alt="Fresh Green Salad">
+        </div>
+        <div class="slide fade">
+            <img src="425c8a8e-8d35-4bc0-b7c8-7184da60aa6e.jpeg" alt="Greek Salad">
+        </div>
+        <div class="slide fade">
+            <img src="9812b497-45a9-4d6c-a418-b06f4a26b338.jpeg" alt="Fruit Salad">
+        </div>
+        <div class="slide fade">
+            <img src="286417c4-9b8a-4091-85b9-5804d141466c.jpeg" alt="Caesar Salad">
+        </div>
+        <div class="slide fade">
+            <img src="bae2eb74-91a4-417f-8a52-9ea6d56df787.jpeg" alt="Pasta Salad">
+        </div>
+        <div class="slide fade">
+            <img src="IMG-20250309-WA0013.jpg" alt="Quinoa Salad">
+        </div>
+    </div>
+    <div class="product-description">
+        <h2>Our Fresh Salads</h2>
+        <p>
+            At Afonia Foods, we believe every salad should be a burst of flavor and nutrition. 
+            From classic Caesar salads to exotic fruit blends, each bowl is crafted with the freshest ingredients.
+            Experience the perfect balance of taste and health in every bite. 🌿
+        </p>
+    </div>
+</div>
+
+
+</body>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 3 seconds
+    }
+</script>
+
+</html>
