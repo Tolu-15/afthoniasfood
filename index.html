@@ -313,57 +313,30 @@
 
     .text-content h1 {
         font-size: 28px;
-        word-wrap: break-word;
-        max-width: 100%;
+        line-height: 1.2;
         margin: 0 auto;
         overflow-wrap: break-word;
+    }
+
+    .text-content h1::after {
+        content: "\A Afonia Foods";
+        white-space: pre;
     }
 
     .text-content p {
         font-size: 16px;
         padding: 0 10px;
     }
+}
 
-    /* About Section */
-    .about-section,
-    .about-ceo {
-        flex-direction: column;
-        padding: 20px;
+/* For Small Phones */
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 24px;
     }
 
-    .logo-container img,
-    .ceo-logo-container img {
-        max-width: 150px;
-    }
-
-    .about-text,
-    .about-text2 {
-        max-width: 100%;
-    }
-
-    /* Navigation */
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    /* Product Section */
-    .product-section {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .slideshow-container {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .product-description {
-        text-align: center;
+    .text-content p {
+        font-size: 14px;
     }
 }
 
