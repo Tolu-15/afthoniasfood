@@ -293,28 +293,23 @@
         opacity: 1;
     }
 }
-/* Mobile Adjustments (Phones Only) */
+/* General Mobile Adjustments */
 @media (max-width: 768px) {
+    /* Adjust Hero Section */
     .hero-section {
+        height: 100vh;
         padding: 20px;
-        text-align: center;
     }
-
-    .text-content {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
+    
     .text-content h1 {
         font-size: 32px;
-        word-wrap: break-word;
     }
 
     .text-content p {
         font-size: 16px;
         padding: 0 10px;
     }
-}
+
     /* About Section */
     .about-section,
     .about-ceo {
@@ -324,17 +319,12 @@
 
     .logo-container img,
     .ceo-logo-container img {
-        max-width: 120px;
+        max-width: 150px;
     }
 
     .about-text,
     .about-text2 {
         max-width: 100%;
-    }
-
-    .about-text h2,
-    .about-text2 h2 {
-        font-size: 24px;
     }
 
     /* Navigation */
@@ -361,6 +351,27 @@
     .product-description {
         text-align: center;
     }
+}
+
+/* For Small Phones */
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 24px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+
+    .logo-container img,
+    .ceo-logo-container img {
+        max-width: 120px;
+    }
+
+    .about-text h2,
+    .about-text2 h2 {
+        font-size: 24px;
+    }
 
     .product-description h2 {
         font-size: 24px;
@@ -370,7 +381,6 @@
         font-size: 16px;
     }
 }
-
 
 
 
