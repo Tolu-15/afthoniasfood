@@ -295,7 +295,7 @@
 }
 /* General Mobile Adjustments */
 @media (max-width: 768px) {
-    /* Adjust Hero Section */
+    /* Hero Section Adjustments */
     .hero-section {
         height: 100vh;
         padding: 20px;
@@ -305,24 +305,23 @@
         text-align: center;
     }
     
+    /* Center and shrink text content */
     .text-content {
         max-width: 90%;
         margin: 0 auto;
         text-align: center;
     }
 
-    .text-content h1 {
-        font-size: 28px;
+    /* Animated Heading Adjustments */
+    .animated-h1 {
+        font-size: 24px;
         line-height: 1.2;
+        max-width: 90%;
         margin: 0 auto;
+        word-break: break-word;
     }
 
-    /* Add line break after "Welcome to" */
-    .text-content h1::after {
-        content: "\A Afonia Foods";
-        white-space: pre;
-    }
-
+    /* Other text */
     .text-content p {
         font-size: 16px;
         padding: 0 10px;
@@ -331,15 +330,15 @@
 
 /* For Small Phones */
 @media (max-width: 480px) {
-    .text-content h1 {
-        font-size: 24px;
+    /* Even smaller on very small screens */
+    .animated-h1 {
+        font-size: 20px;
     }
 
     .text-content p {
         font-size: 14px;
     }
 }
-
     .logo-container img,
     .ceo-logo-container img {
         max-width: 120px;
