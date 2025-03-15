@@ -299,10 +299,24 @@
     .hero-section {
         height: 100vh;
         padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     
+    .text-content {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     .text-content h1 {
-        font-size: 32px;
+        font-size: 28px;
+        word-wrap: break-word;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-wrap: break-word;
     }
 
     .text-content p {
@@ -354,21 +368,18 @@
 }
 
 /* For Small Phones */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .text-content h1 {
-        font-size: 32px;
+        font-size: 24px;
         word-wrap: break-word;
         max-width: 100%;
         margin: 0 auto;
         overflow-wrap: break-word;
     }
 
-    .text-content {
-        max-width: 90%;
-        margin: 0 auto;
-        text-align: center;
+    .text-content p {
+        font-size: 14px;
     }
-}
 
     .logo-container img,
     .ceo-logo-container img {
@@ -388,7 +399,6 @@
         font-size: 16px;
     }
 }
-
 
 
 
