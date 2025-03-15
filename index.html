@@ -312,9 +312,15 @@
     }
 
     .text-content h1 {
-        font-size: 28px; /* Smaller size to fit */
+        font-size: 28px;
         line-height: 1.2;
         margin: 0 auto;
+    }
+
+    /* Add line break after "Welcome to" */
+    .text-content h1::after {
+        content: "\A Afonia Foods";
+        white-space: pre;
     }
 
     .text-content p {
@@ -326,7 +332,7 @@
 /* For Small Phones */
 @media (max-width: 480px) {
     .text-content h1 {
-        font-size: 24px; /* Even smaller on smaller screens */
+        font-size: 24px;
     }
 
     .text-content p {
