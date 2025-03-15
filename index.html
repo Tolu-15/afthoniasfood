@@ -354,14 +354,21 @@
 }
 
 /* For Small Phones */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .text-content h1 {
-        font-size: 24px;
+        font-size: 32px;
+        word-wrap: break-word;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-wrap: break-word;
     }
 
-    .text-content p {
-        font-size: 14px;
+    .text-content {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
     }
+}
 
     .logo-container img,
     .ceo-logo-container img {
