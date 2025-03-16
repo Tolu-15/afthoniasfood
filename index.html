@@ -9,6 +9,9 @@
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Afthonia Foods </title>
+    <link rel="icon" type="image/png" href="Brown Beige Circle Chinese Food Logo_20250315_184612_0000.png">
+
+    
     <style>
         * {
             margin: 0;
@@ -21,7 +24,7 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Container for the background */
+        
         .hero-section {
             height: 100vh;
             display: flex;
@@ -31,7 +34,6 @@
             overflow: hidden;
         }
 
-        /* Blurred background image */
         .hero-section::before {
             content: "";
             position: absolute;
@@ -44,18 +46,18 @@
             z-index: 1;
         }
 
-        /* Dark overlay to improve text readability */
+        
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Darkens the background */
+            background: rgba(0, 0, 0, 0.4);
             z-index: 2;
         }
 
-        /* Text content */
+       
         .text-content {
             color: white;
             z-index: 3;
@@ -77,7 +79,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 3000px; /* Adjust width to control size */
+    max-width: 3000px; 
     margin: 0 auto;
 }
         .about-section {
@@ -109,7 +111,7 @@
      animation: spin 5s linear infinite;
 }
 
-/* Keyframes for spin */
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -121,7 +123,7 @@
 
 
 
-/* About Text */
+
 .about-text {
     flex: 2;
     max-width: 500px;
@@ -140,7 +142,7 @@
 
 }
 
-/* About CEO Section */
+
 .about-ceo {
     display: flex;
     align-items: center;
@@ -151,7 +153,7 @@
     margin-top: 20px;
 }
 
-/* CEO Logo */
+
 .ceo-logo-container {
     flex: 1;
     display: flex;
@@ -166,7 +168,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* CEO Text */
+
 .about-text2 {
     flex: 2;
     max-width: 500px;
@@ -183,7 +185,7 @@
     color: #555;
     line-height: 1.6;
 }
-/* Navigation Bar */
+
 .navbar {
     background: #8B4513; /* Brown color */
     padding: 15px 0;
@@ -216,7 +218,7 @@
 .navbar ul li a:hover {
     color: #FFD700; /* Gold color on hover */
 }
-/* Product Section */
+
 .product-section {
     display: flex;
     align-items: center;
@@ -226,7 +228,7 @@
     margin-top: 50px;
 }
 
-/* Slideshow */
+
 .slideshow-container {
     max-width: 1000px;
     position: relative;
@@ -247,7 +249,7 @@
     border-radius: 20px;
 }
 
-/* Product Description */
+
 .product-description {
     max-width: 400px;
     text-align: left;
@@ -265,7 +267,7 @@
     line-height: 1.5;
 }
 
-/* Animation */
+
 .fade {
     animation: fadeEffect 1.5s;
 }
@@ -274,14 +276,14 @@
     from { opacity: 0.4; }
     to { opacity: 1; }
 }
-/* Container for animation */
+
 .animated-h1 {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
 }
 
-/* Style for each letter */
+
 .animated-h1 span {
     display: inline-block;
     animation: dropLetter 0.5s ease forwards;
@@ -289,7 +291,7 @@
     animation-duration: 3s; /* Controls total animation duration */
 }
 
-/* Animation */
+
 @keyframes dropLetter {
     0% {
         transform: translateY(-100%);
@@ -300,9 +302,9 @@
         opacity: 1;
     }
 }
-/* General Mobile Adjustments */
+
 @media (max-width: 768px) {
-    /* Hero Section Adjustments */
+ 
     .hero-section {
         height: 100vh;
         padding: 20px;
@@ -312,14 +314,14 @@
         text-align: center;
     }
     
-    /* Center and shrink text content */
+    
     .text-content {
         max-width: 90%;
         margin: 0 auto;
         text-align: center;
     }
 
-    /* Animated Heading Adjustments */
+    
     .animated-h1 {
         font-size: 20px;
         line-height: 1.2;
@@ -328,16 +330,16 @@
         word-break: break-word;
     }
 
-    /* Other text */
+   
     .text-content p {
         font-size: 16px;
         padding: 0 10px;
     }
 }
 
-/* For Small Phones */
+
 @media (max-width: 480px) {
-    /* Even smaller on very small screens */
+    
     .animated-h1 {
         font-size: 16px;
     }
@@ -412,13 +414,105 @@
 .ig-message-box a:hover {
     background: #5A2E0C;
 }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
 
+.testimonial-section {
+            background: url('school-hallway.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        
+        .testimonial-container {
+            text-align: center;
+            color: white;
+        }
 
+        
+        h2 {
+            color: #ffcc00;
+            font-size: 20px;
+            margin: 0;
+        }
 
+        h1 {
+            font-size: 40px;
+            margin: 10px 0;
+        }
 
+       
+        .testimonial-slider {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
 
+        .testimonial-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            background: rgba(72, 61, 139, 0.8);
+            padding: 30px;
+            color: #fff;
+            display: none;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        .quote {
+            font-size: 40px;
+            margin: 0;
+        }
+
+       
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        
+        .testimonial-name {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        
+        .testimonial-role {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .indicator {
+            margin-top: 20px;
+        }
+
+        .indicator span {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            display: inline-block;
+            background: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .indicator span.active {
+            background: #ffcc00;
+        }
     </style>
 </head>
 <body>
@@ -427,7 +521,7 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#product">Menu</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="#ceo">Contact</a></li>
         </ul>
     </nav>
     
@@ -471,14 +565,14 @@
         <div class="about-text">
             <h2>About Afonia Foods</h2>
             <p>
-                At Afonia Foods, we specialize in crafting fresh, healthy, and delicious salads.  
+                At Afthonia Foods, we specialize in crafting fresh, healthy, and delicious salads.  
                 Every bowl is made with care, bringing a perfect blend of flavor and nutrition.  
                 Taste the freshness, feel the goodness.  
             </p>
         </div>
     </div>
 
-    <div class="about-ceo">
+    <div id="ceo" class="about-ceo">
         <div class="ceo-logo-container">
             <img src="Screenshot 2025-03-16 002156.png" alt="Afonia Foods Ceo">
         </div>
@@ -487,7 +581,7 @@
             <h3>Mosunmola Bammodu</h3>
             <p>Founder & CEO of Afonia Foods</p>
             <p>
-                At Afonia Foods, we specialize in crafting fresh, healthy, and delicious salads.  
+                At Afthonia Foods, we specialize in crafting fresh, healthy, and delicious salads.  
                 Every bowl is made with care, bringing a perfect blend of flavor and nutrition.  
                 Taste the freshness, feel the goodness.  
             </p>
@@ -549,7 +643,7 @@
         </p>
     </div>
 </div>
-<div class="ig-message-box">
+<div id="message" class="ig-message-box">
     <a href="https://www.instagram.com/afthoniafoods/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         Order from afthoniafoods
@@ -562,8 +656,60 @@
         <source src="WhatsApp Video 2025-03-15 at 10.26.53 PM.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-</div>
-
+    
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <h2>What Our Clients Are Saying</h2>
+            <h1 style="color: burlywood;">TESTIMONIAL</h1>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <p class="quote">“</p>
+                    <p class="testimonial-text">As the front-end developer for Afthonia Food, I crafted a seamless, visually appealing experience for salad lovers. The site makes ordering fresh, healthy, and delicious salads effortless. With top-quality ingredients, Afthonia Food delivers a refreshing and wholesome salad experience. Highly recommended!" 🥗🚀</p>
+                    <p class="quote">”</p>
+                    <h3 class="testimonial-name">Toluwanimi</h3>
+                    <p class="testimonial-role">Web-designer</p>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="quote">“</p>
+                    <p class="testimonial-text"></p>
+                    <p class="quote">”</p>
+                    <h3 class="testimonial-name"></h3>
+                    <p class="testimonial-role">Customer</p>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="quote">“</p>
+                    <p class="testimonial-text"></p>
+                    <p class="quote">”</p>
+                    <h3 class="testimonial-name"></h3>
+                    <p class="testimonial-role">Customer</p>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="quote">“</p>
+                    <p class="testimonial-text"></p>
+                    <p class="quote">”</p>
+                    <h3 class="testimonial-name"></h3>
+                    <p class="testimonial-role"></p>
+                </div>
+            </div>
+            <div class="indicator">
+                <span onclick="moveSlide(0)"></span>
+                <span onclick="moveSlide(1)"></span>
+                <span onclick="moveSlide(2)"></span>
+                <span onclick="moveSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+    <footer style="
+        text-align: center;
+        padding: 10px;
+        background-color: #f8f8f8;
+        color: #333;
+        font-size: 14px;
+    
+    ">
+        <p>&copy; 2025 Afthonia Foods. All rights reserved.</p>
+    </footer>
+    
 
 
 
@@ -583,5 +729,26 @@
         setTimeout(showSlides, 5000); // Change image every 3 seconds
     }
 </script>
+
+<script>
+    let slides = document.querySelectorAll('.testimonial-slide');
+    let indicators = document.querySelectorAll('.indicator span');
+    let currentIndex = 0;
+
+    function moveSlide(index) {
+        slides[currentIndex].classList.remove('active');
+        indicators[currentIndex].classList.remove('active');
+        currentIndex = index;
+        slides[currentIndex].classList.add('active');
+        indicators[currentIndex].classList.add('active');
+    }
+
+    setInterval(() => {
+        let nextIndex = (currentIndex + 1) % slides.length;
+        moveSlide(nextIndex);
+    }, 7000);
+</script>
+    
+
 
 </html>
